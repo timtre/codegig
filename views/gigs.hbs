@@ -1,0 +1,18 @@
+<section id="gigs" class="container">
+    <h1>All Gigs</h1>
+    {{#each gigs_list}}
+    <div class="gig">
+      <h3>{{this.title}}</h3>
+      <p>{{this.description}}</p>
+      <ul>
+        <li>Budget: {{this.budget}}</li>
+        <li><a href="mailto:{{this.contact_email}}" class="btn btn-reverse">Apply Now</a></li>
+      </ul>
+      <div class="tech">
+        <small>Technologies Needed: <span>{{this.technologies}}</span></small>
+      </div>
+    </div>
+    {{ else }}
+    <p>No gigs available</p>
+    {{/each}}
+  </section>
